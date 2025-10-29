@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GenWise — Smart Career Path Finder</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <div class="brand">
+        <h1>GenWise</h1>
+        <p class="tag">Let GenWise guide your dreams — one choice at a time.</p>
+      </div>
+      <nav class="navlinks">
+        <a href="#quizSection">Take Quiz</a>
+        <a href="#how">How it Works</a>
+        <a href="https://github.com/prasadchinnari" target="_blank" rel="noopener">My Projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero card">
+      <h2>Find the best educational path after 10th</h2>
+      <p>Answer a few quick questions about your interests — GenWise will suggest streams and step-by-step next actions.</p>
+      <a class="btn start" id="startBtn">Start Quiz</a>
+    </section>
+
+    <section id="quizSection" class="card hidden">
+      <h2>Tell us about your interests</h2>
+      <form id="quizForm">
+        <div class="grid">
+          <label class="option"><input type="checkbox" name="logic" value="1"><span> I enjoy maths & problem solving</span></label>
+          <label class="option"><input type="checkbox" name="biology" value="1"><span> I like biology & helping people</span></label>
+          <label class="option"><input type="checkbox" name="design" value="1"><span> I enjoy drawing & design</span></label>
+          <label class="option"><input type="checkbox" name="tech" value="1"><span> I like computers & coding</span></label>
+          <label class="option"><input type="checkbox" name="commerce" value="1"><span> I am interested in business & finance</span></label>
+          <label class="option"><input type="checkbox" name="arts" value="1"><span> I love reading, writing & communication</span></label>
+          <label class="option"><input type="checkbox" name="building" value="1"><span> I enjoy building & planning (architecture/engineer)</span></label>
+        </div>
+        <div class="actions">
+          <button type="button" id="findPath" class="btn">Find My Path</button>
+          <button type="button" id="resetBtn" class="btn hollow">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="resultSection" class="card hidden results">
+      <h2>Your Suggested Career Paths</h2>
+      <div id="resultsContainer" class="results-list"></div>
+      <div class="actions">
+        <button id="startAgain" class="btn hollow">Start Again</button>
+        <a id="copyResults" class="btn">Copy Results</a>
+        <a class="btn" href="https://github.com/prasadchinnari" target="_blank" rel="noopener">View My Other Projects</a>
+      </div>
+    </section>
+
+    <section id="how" class="card info">
+      <h3>How GenWise decides</h3>
+      <p>GenWise uses a simple, explainable scoring system that maps interests to suitable streams. This lightweight approach is easy to understand and can be upgraded later with ML models for better personalization.</p>
+      <ul>
+        <li><strong>Engineering</strong> — For strong math & problem solvers. Path: Science (Maths) → Diploma/B.Tech.</li>
+        <li><strong>Medical & Healthcare</strong> — For biology & caring students. Path: Biology → MBBS/Nursing/Allied courses.</li>
+        <li><strong>Design & Creative Arts</strong> — For visual and creative students. Path: Art & Design courses → B.Des/Diploma.</li>
+        <li><strong>Computer Science & IT</strong> — For tech-savvy students. Path: Computer courses → B.Tech/BE in CS or bootcamps.</li>
+        <li><strong>Commerce</strong> — For business and finance interests. Path: Commerce → B.Com/BBA/CA pathway.</li>
+        <li><strong>Arts & Communication</strong> — For writers and communicators. Path: Arts → BA/Journalism/Mass Communication.</li>
+        <li><strong>Architecture & Civil</strong> — For building and planning lovers. Path: B.Arch / Civil Engineering.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 GenWise — Developed by <strong>Chinnari Durga Prasad</strong></p>
+      <p class="small"><a href="https://chinnaridurgaprasad.github.io" target="_blank" rel="noopener">Visit my portfolio</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/logic.js"></script>
+</body>
+</html>

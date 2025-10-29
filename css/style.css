@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+*{box-sizing:border-box}
+:root{
+  --bg1:#f6f9ff;
+  --accent1:#6a11cb;
+  --accent2:#2575fc;
+  --card:#ffffff;
+  --btn:#ff7a60;
+}
+body{font-family:'Poppins',sans-serif;margin:0;background:linear-gradient(180deg,var(--bg1),#ffffff);color:#122;}
+.container{max-width:980px;margin:0 auto;padding:20px}
+.topbar{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#fff;padding:22px 0;position:sticky;top:0;z-index:30}
+.topbar .container{display:flex;align-items:center;justify-content:space-between}
+.brand h1{margin:0;font-size:24px}
+.tag{opacity:0.95;margin-top:6px;font-weight:500}
+.navlinks a{color:#fff;margin-left:16px;text-decoration:none;font-weight:600}
+.card{background:var(--card);border-radius:12px;padding:20px;margin:18px 0;box-shadow:0 10px 30px rgba(37,117,252,0.06)}
+.hero h2{margin:0 0 8px;font-size:22px}
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;background:var(--btn);color:#fff;text-decoration:none;border:none;cursor:pointer;font-weight:700;box-shadow:0 8px 20px rgba(255,122,96,0.12);transition:transform .14s ease}
+.btn:hover{transform:translateY(-3px)}
+.btn.hollow{background:transparent;color:var(--accent2);border:2px solid rgba(37,117,252,0.06)}
+.hidden{display:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:12px}
+.option{display:block;padding:12px;border-radius:8px;background:linear-gradient(180deg,#fff,#fbfcff);cursor:pointer;border:1px solid #f0f4ff}
+.option input{margin-right:10px}
+.actions{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+.results-list .career-card{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:10px;background:linear-gradient(90deg,#f5f7ff,#fff);margin-bottom:12px}
+.career-card .left{width:64px;height:64px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff}
+.career-card .body{flex:1}
+.career-card .title{margin:0;font-size:18px}
+.career-card .desc{margin:6px 0 0;color:#444}
+.career-card.engineering .left{background:linear-gradient(90deg,#6a11cb,#2575fc)}
+.career-card.medical .left{background:linear-gradient(90deg,#00c6ff,#0072ff)}
+.career-card.design .left{background:linear-gradient(90deg,#ff6a88,#ff9a9e)}
+.career-card.tech .left{background:linear-gradient(90deg,#00b09b,#96c93d)}
+.career-card.commerce .left{background:linear-gradient(90deg,#f7971e,#ffd200)}
+.career-card.arts .left{background:linear-gradient(90deg,#8e2de2,#4a00e0)}
+.career-card.building .left{background:linear-gradient(90deg,#56ab2f,#a8e063)}
+.footer{padding:18px 0;text-align:center;color:#555}
+.small{font-size:13px;color:#666;margin-top:8px}
+@media(max-width:600px){
+  .topbar .container{flex-direction:column;align-items:flex-start;gap:10px}
+  .navlinks{display:flex;gap:8px;flex-wrap:wrap}
+}
