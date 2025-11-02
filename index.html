@@ -1,0 +1,133 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>GenWise — Productivity & Career Guidance</title>
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">GenWise</div>
+    <nav class="side-nav">
+      <a href="#dashboard" class="active">Dashboard</a>
+      <a href="#productivity">Productivity</a>
+      <a href="#eduscope">EduScope</a>
+      <a href="#colleges">Colleges</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="side-footer">Developed by Chinnari Durga Prasad</div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <div class="search">GenWise</div>
+      <div class="top-actions">
+        <button id="btn-theme" class="btn small">Toggle Theme</button>
+      </div>
+    </header>
+
+    <section id="dashboard" class="section hero-section">
+      <div class="hero-left">
+        <h1>Stay Focused. Plan Smart. Achieve More.</h1>
+        <p>GenWise combines productivity tools with career guidance (EduScope) to help students reach their goals.</p>
+        <div class="hero-cta">
+          <button id="open-timer" class="btn">Start Timer</button>
+          <button id="open-task" class="btn btn-ghost">Add Task</button>
+        </div>
+      </div>
+      <div class="hero-right card">
+        <img src="assets/images/dashboard-illus.jpg" alt="Dashboard illustration" style="width:100%;border-radius:10px" />
+      </div>
+    </section>
+
+    <section id="productivity" class="section container">
+      <h2>Productivity</h2>
+      <div class="prod-grid">
+        <div class="card">
+          <h3>Tasks</h3>
+          <form id="task-form" class="task-form">
+            <input id="task-input" placeholder="New task (e.g., Study DSA for 1 hour)" />
+            <div class="task-actions"><button type="button" id="add-task" class="btn">Add</button></div>
+          </form>
+          <ul id="task-list" class="task-list"></ul>
+        </div>
+        <div class="card">
+          <h3>Focus Timer</h3>
+          <div id="timer-display" class="timer-display">25:00</div>
+          <div class="timer-controls">
+            <button id="start-timer" class="btn">Start</button>
+            <button id="stop-timer" class="btn btn-ghost">Stop</button>
+            <button id="reset-timer" class="btn btn-ghost">Reset</button>
+          </div>
+        </div>
+      </div>
+      <div class="card quotes">
+        <h3>Motivational Quote</h3>
+        <p id="quote">"Small steps every day lead to big changes."</p>
+        <button id="new-quote" class="btn btn-ghost">New Quote</button>
+      </div>
+    </section>
+
+    <section id="eduscope" class="section container">
+      <h2>EduScope — Career Guidance</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Quick Interest Quiz</h3>
+          <form id="quiz-form" class="form-quiz">
+            <label>1. Like numbers and logic?<select id="q1"><option value="0">Select</option><option value="2">Strongly Agree</option><option value="1">Somewhat</option><option value="0">Not Really</option></select></label>
+            <label>2. Prefer experiments and labs?<select id="q2"><option value="0">Select</option><option value="2">Strongly Agree</option><option value="1">Somewhat</option><option value="0">Not Really</option></select></label>
+            <label>3. Interested in business/topics?<select id="q3"><option value="0">Select</option><option value="2">Strongly Agree</option><option value="1">Somewhat</option><option value="0">Not Really</option></select></label>
+            <label>4. Enjoy arts/design?<select id="q4"><option value="0">Select</option><option value="2">Strongly Agree</option><option value="1">Somewhat</option><option value="0">Not Really</option></select></label>
+            <label>5. Curious about coding/tech?<select id="q5"><option value="0">Select</option><option value="2">Strongly Agree</option><option value="1">Somewhat</option><option value="0">Not Really</option></select></label>
+            <label>6. Prefer social service/public admin?<select id="q6"><option value="0">Select</option><option value="2">Strongly Agree</option><option value="1">Somewhat</option><option value="0">Not Really</option></select></label>
+            <div class="form-actions"><button type="button" id="quiz-submit" class="btn">Get Recommendation</button></div>
+            <div id="quiz-result" class="result"></div>
+          </form>
+        </div>
+        <div class="card">
+          <h3>Career Roadmaps</h3>
+          <div class="roadmaps">
+            <h4>Engineer</h4>
+            <ol><li>Choose Science (MPC)</li><li>12th (MPC)</li><li>Engineering Entrance</li><li>B.Tech → Internships</li></ol>
+            <h4>Doctor</h4>
+            <ol><li>Choose BiPC</li><li>NEET</li><li>MBBS → Internship</li></ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="colleges" class="section container">
+      <h2>College Finder</h2>
+      <p>Select stream to filter colleges.</p>
+      <select id="college-stream"><option value="all">-- Select Stream --</option><option value="science">Science</option><option value="commerce">Commerce</option><option value="arts">Arts</option></select>
+      <div id="college-list" class="college-list"></div>
+    </section>
+
+    <section id="contact" class="section container">
+      <h2>Contact</h2>
+      <p>For counseling sessions or partnerships, email: <a href="mailto:prasadchinnari2@gmail.com">prasadchinnari2@gmail.com</a></p>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <p>&copy; 2025 GenWise — Developed by Chinnari Durga Prasad</p>
+      </div>
+    </footer>
+  </main>
+</div>
+
+<!-- Modal for adding task -->
+<div id="task-modal" class="modal" aria-hidden="true">
+  <div class="modal-dialog">
+    <button id="task-close" class="modal-close">✕</button>
+    <h3>Add Task</h3>
+    <input id="modal-task-input" placeholder="Task description" />
+    <div style="margin-top:12px"><button id="modal-add-task" class="btn">Add Task</button></div>
+  </div>
+</div>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>

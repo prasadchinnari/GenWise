@@ -1,0 +1,49 @@
+
+:root{
+  --bg:#f6fbff;
+  --accent:#0b6cff;
+  --accent2:#0b8a3e;
+  --muted:#475569;
+  --card:#ffffff;
+  --radius:12px;
+  --sidebar:#0b6cff;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:#0f1720;line-height:1.5}
+.app{display:flex;min-height:100vh}
+.sidebar{width:240px;background:linear-gradient(180deg,var(--sidebar),#055);color:#fff;padding:24px;display:flex;flex-direction:column;justify-content:space-between}
+.brand{font-size:22px;font-weight:800;margin-bottom:12px}
+.side-nav{display:flex;flex-direction:column;gap:12px}
+.side-nav a{color:#cfeef0;text-decoration:none;padding:8px;border-radius:8px}
+.side-nav a.active, .side-nav a:hover{background:rgba(255,255,255,0.06);color:#fff}
+.side-footer{font-size:13px;opacity:0.9;margin-top:20px}
+.main{flex:1;display:flex;flex-direction:column}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:16px 28px;border-bottom:1px solid #e6f3ea;background:transparent}
+.section{padding:28px}
+.hero-section{display:flex;gap:28px;align-items:center;justify-content:space-between;background:linear-gradient(180deg,#fff,#f7fff8);border-radius:12px;margin:20px 28px;padding:24px}
+.hero-left h1{margin:0;font-size:28px;color:var(--accent2)}
+.hero-left p{color:var(--muted)}
+.hero-cta{margin-top:12px;display:flex;gap:10px}
+.card{background:var(--card);border-radius:12px;padding:16px;box-shadow:0 8px 20px rgba(15,23,42,0.06)}
+.container{max-width:1100px;margin:0 auto}
+.prod-grid{display:grid;grid-template-columns:1fr 320px;gap:16px;margin-top:12px}
+.task-list{list-style:none;padding:0;margin:0}
+.task-list li{padding:10px;border-radius:8px;border:1px solid #eef6f0;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
+.timer-display{font-size:32px;text-align:center;padding:16px;border-radius:8px;background:#f0fff5;border:1px solid #e6f7ec}
+.timer-controls{display:flex;gap:8px;justify-content:center;margin-top:8px}
+.quotes{margin-top:16px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.roadmap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+.college-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px}
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.45);z-index:1000;padding:20px}
+.modal[aria-hidden="false"]{display:flex}
+.modal-dialog{width:100%;max-width:520px;background:white;padding:24px;border-radius:12px;position:relative}
+.modal-close{position:absolute;right:12px;top:8px;border:none;background:transparent;font-size:20px;cursor:pointer}
+@media (max-width:900px){
+  .sidebar{display:none}
+  .hero-section{flex-direction:column;padding:16px;margin:12px}
+  .prod-grid{grid-template-columns:1fr}
+  .grid-2{grid-template-columns:1fr}
+  .topbar{padding:12px}
+}
